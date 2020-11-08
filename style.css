@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+body {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+button {
+    align-self: center;
+    width: 25vw;
+    border-radius: 100px;
+    height: 5vh;
+    font-size: 2vw;
+}
+button, #bar {
+    border: solid 1px black;
+}
+#loadedScreen {
+    display: flex;
+    flex-direction: column;
+    align-content: baseline;
+    justify-content: center;
+}
+h1 {
+    display: none;
+    align-self: center;
+    color: chartreuse;
+    text-shadow: black 1px 0, black -1px 0, black 0 1px, black 0 -1px;
+    font-family: 'VT323', monospace;
+    text-transform: uppercase;
+    font-size: 5vw;
+}
+#refreshBtn { 
+    padding: 0;
+    display: none;
+    font-family: 'VT323', monospace;
+    font-size: 2vw;
+}
+#bar {
+    height: 3vh;
+    width: 66vw;
+    display: none;
+    margin: 48.5vh auto;
+}
+#fill {
+    background: chartreuse;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    animation: fill-in 3000ms ease-in-out forwards;
+    animation-play-state: paused;
+    margin-left: 0;
+    height: 3vh;
+    text-indent: 50%;
+}
+
+@keyframes fill-in {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
